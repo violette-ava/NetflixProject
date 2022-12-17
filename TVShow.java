@@ -11,6 +11,13 @@ public class TVShow extends Program{
         this.CurrentEpisode = 1;
     }
 
+    public TVShow(String Title, int Seasons, String Rating, int CurrentEpisode){
+        this.Title = Title;
+        this.Seasons = Seasons;
+        this.Rating = Rating;
+        this.CurrentEpisode = CurrentEpisode; 
+    }
+
     public String getTitle() {
         return Title;
     }
