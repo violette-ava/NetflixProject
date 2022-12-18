@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Profile {
-    private static ArrayList<Program> programs = new ArrayList<>();
+    private ArrayList<Program> programs = new ArrayList<>();
     private String name;
     private int age;
     private String country;
@@ -45,6 +45,10 @@ public class Profile {
 
     public void addProgram(Program p){
         programs.add(p);
+    }
+
+    public String toString(){
+        return "Name:" +name+ " "+ "Age:"+ age;
     }
 
     

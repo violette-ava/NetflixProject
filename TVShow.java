@@ -3,6 +3,7 @@ public class TVShow extends Program{
     private int Seasons;
     private String Rating; 
     private int CurrentEpisode; 
+    private String availability;
 
     public TVShow(){
         this.Title = Title;
@@ -11,7 +12,7 @@ public class TVShow extends Program{
         this.CurrentEpisode = 1;
     }
 
-    public TVShow(String Title, int Seasons, String Rating, int CurrentEpisode){
+    public TVShow(String Title, int Seasons, String Rating){
         this.Title = Title;
         this.Seasons = Seasons;
         this.Rating = Rating;
@@ -49,6 +50,21 @@ public class TVShow extends Program{
     public void setCurrentEpisode(int currentEpisode) {
         CurrentEpisode = currentEpisode;
     }
+
+    public String getAvailability() {
+        return availability;
+    }
+
+    public String checkAvailability(){
+        return "Available";
+    }
+
+    public String toString(){
+        super.toString();
+        return "Title:"+Title+" "+ "Seasons:"+ Seasons+" "+ "Rating:"+Rating;
+     }
+
+
 
     
 

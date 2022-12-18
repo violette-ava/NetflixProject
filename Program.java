@@ -20,6 +20,16 @@ public class Program{
         return availability;
     }
 
+    public String checkAvailability(){
+        return "Available";
+    }
+
+  
+
+    public String toString(){
+        return "Availability" +checkAvailability();
+    }
+
 
     
 

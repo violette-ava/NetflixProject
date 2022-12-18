@@ -2,6 +2,7 @@ public class Movie extends Program {
     private String title;
     private String genre;
     private String Rating;
+    private String availability;
 
     public Movie() {
         this.title = title;
@@ -39,7 +40,17 @@ public class Movie extends Program {
         this.title = title;
     }
 
-    public void removeMovie(Movie c) {
+    public String getAvailability() {
+        return availability;
+    }
+
+    public String checkAvailability(){
+        return "Available";
+    }
+
+    public String toString(){
+        super.toString();
+        return "Title:"+title+" "+ "Genre:"+genre+" "+ "Rating:"+Rating;
     }
 
 
