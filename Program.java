@@ -1,6 +1,8 @@
 public class Program{
     private String availability;
 
+
+
     public Program(String availability) {
         this.availability = availability;
     }
@@ -12,6 +14,10 @@ public class Program{
     public void setAvailability(String a){
         availability = a;
 
+    }
+
+    public String getAvailability() {
+        return availability;
     }
 
 

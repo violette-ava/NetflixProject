@@ -1,4 +1,8 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Profile {
+    private static ArrayList<Program> programs = new ArrayList<>();
     private String name;
     private int age;
     private String country;
@@ -38,6 +42,14 @@ public class Profile {
     public void setCountry(String country) {
         this.country = country;
     }
+
+    public void addProgram(Program p){
+        programs.add(p);
+    }
+
+    
+
+   
 
     
 

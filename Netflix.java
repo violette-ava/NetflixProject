@@ -17,8 +17,8 @@ public class Netflix {
             System.out.println("Welcome to Netflix");
             System.out.println();
             System.out.println("1) Add a Profile");
-            System.out.println("2) TV Show");
-            System.out.println("3) Movie");
+            System.out.println("2) Add a TV Show");
+            System.out.println("3) Add a Movie");
             System.out.println("4) List all TV Shows");
             System.out.println("5) List all Movies");
             System.out.println("6) Search for a Movie");
@@ -56,6 +56,18 @@ public class Netflix {
                 sc.nextLine();
                 TVShow tvs= new TVShow(TVShowTitle, numSeasons, rating, currentEpisode);
                 shows.add(tvs);
+                System.out.println("Who's currently watching this?");
+                for (int index = 0; index < profiles.size(); index++) {
+                    System.out.println(index + " " + profiles.get(index)); 
+                }
+                System.out.println();
+                System.out.println("Choice:");
+                int ans = sc.nextInt();
+                sc.nextLine();
+                ans.addProgram(p);
+                
+                
+
                 //NEED TO ADD THIS SHOW TO A PROFILE
                 
                 break;
