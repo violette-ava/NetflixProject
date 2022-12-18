@@ -1,34 +1,34 @@
-public class Movie extends Program {
+public class Movie extends Netflix {
     private String title;
     private String genre;
-    private String rating;
+    private String Rating;
 
     public Movie() {
         this.title = title;
         this.genre = genre;
-        this.rating = rating; 
+        this.Rating = Rating; 
     } 
 
     public Movie(String title, String genre, String rating){
         this.title = title;
         this.genre = genre;
-        this.rating = rating; 
+        this.Rating = rating; 
     }
 
     public String getGenre() {
         return genre;
     }
-
+   
     public void setGenre(String genre) {
         this.genre = genre;
     }
 
     public String getRating() {
-        return rating;
+        return Rating;
     }
-
-    public void setRating(String rating) {
-        this.rating = rating;
+   
+    public void setRating(String Rating) {
+        this.Rating = Rating;
     }
 
     public String getTitle() {
@@ -36,8 +36,15 @@ public class Movie extends Program {
     }
 
     public void setTitle(String title) {
-        title = title;
+        this.title = title;
     }
+
+    public void removeMovie(Movie c) {
+    }
+
+
+
+   
 
 
 

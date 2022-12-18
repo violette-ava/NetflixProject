@@ -1,4 +1,4 @@
-public class TVShow extends Program{
+public class TVShow extends Netflix{
     private String Title;
     private int Seasons;
     private String Rating; 
@@ -35,11 +35,11 @@ public class TVShow extends Program{
     }
 
     public String getRating() {
-        return Rating;
+       return Rating;
     }
 
-    public void setRating(String rating) {
-        Rating = rating;
+    public void setRating(String Rating) {
+        this.Rating = Rating;
     }
 
     public int CurrentEpisode() {
