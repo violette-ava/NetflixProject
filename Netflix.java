@@ -42,8 +42,7 @@ public class Netflix {
                 String country = sc.nextLine();
                 Profile s = new Profile(name, age, country);
                 profiles.add(s);
-
-
+                
                 case 2: 
                 System.out.println("TV Show Title?");
                 String TVShowTitle = sc.nextLine();
@@ -57,6 +56,7 @@ public class Netflix {
                 sc.nextLine();
                 TVShow tvs= new TVShow(TVShowTitle, numSeasons, rating, currentEpisode);
                 shows.add(tvs);
+                //NEED TO ADD THIS SHOW TO A PROFILE
                 
                 break;
 
@@ -69,6 +69,7 @@ public class Netflix {
                 String r = sc.nextLine();
                 Movie m = new Movie(movieTitle, genre, r);
                 movies.add(m);
+                //NEED TO ADD THIS MOVIE TO A PROFILE
                 break;
 
                 case 4:
