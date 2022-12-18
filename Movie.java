@@ -1,4 +1,4 @@
-public class Movie extends Netflix {
+public class Movie extends Program {
     private String title;
     private String genre;
     private String Rating;

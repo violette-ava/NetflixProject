@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Netflix {
     private static ArrayList<Movie> movies = new ArrayList<>();
     private static ArrayList<TVShow> shows = new ArrayList<>();
+    private static ArrayList<Profile> profiles = new ArrayList<>();
     private static Scanner sc = new Scanner(System.in);
   
 
@@ -15,22 +16,35 @@ public class Netflix {
         while (choice > 0){
             System.out.println("Welcome to Netflix");
             System.out.println();
-            System.out.println("What would you like to watch?");
-            System.out.println();
-            System.out.println("1) TV Show");
-            System.out.println("2) Movie");
-            System.out.println("3) List all TV Shows");
-            System.out.println("4) List all Movies");
-            System.out.println("5) Search for a Movie");
-            System.out.println("6) Search for a TV Show");
-            System.out.println("7) Exit Netflix");
+            System.out.println("1) Add a Profile");
+            System.out.println("2) TV Show");
+            System.out.println("3) Movie");
+            System.out.println("4) List all TV Shows");
+            System.out.println("5) List all Movies");
+            System.out.println("6) Search for a Movie");
+            System.out.println("7) Search for a TV Show");
+            System.out.println("8) Exit Netflix");
             System.out.println("Choice: ");
             System.out.println();
             choice = sc.nextInt();
             sc.nextLine();
 
             switch(choice){
+
                 case 1: 
+                System.out.println("Add a Profile");
+                System.out.println("Enter Name: ");
+                String name = sc.nextLine();
+                System.out.println("Enter Age: ");
+                int age = sc.nextInt();
+                sc.nextLine();
+                System.out.println("Country?");
+                String country = sc.nextLine();
+                Profile s = new Profile(name, age, country);
+                profiles.add(s);
+
+
+                case 2: 
                 System.out.println("TV Show Title?");
                 String TVShowTitle = sc.nextLine();
                 System.out.println("Number of seasons?");
@@ -43,9 +57,10 @@ public class Netflix {
                 sc.nextLine();
                 TVShow tvs= new TVShow(TVShowTitle, numSeasons, rating, currentEpisode);
                 shows.add(tvs);
+                
                 break;
 
-                case 2:
+                case 3:
                 System.out.println("Movie Title?");
                 String movieTitle = sc.nextLine();
                 System.out.println("Movie Genre?");
@@ -56,41 +71,41 @@ public class Netflix {
                 movies.add(m);
                 break;
 
-                case 3:
+                case 4:
                 System.out.println("Listing TV Shows...");
                 for (int index = 0; index < shows.size(); index++) {
                     System.out.println(index + " " + shows.get(index)); 
                 }
                 break;
 
-                case  4:
+                case 5:
                 System.out.println("Listing Movies...");
                 for (int index = 0; index < movies.size(); index++) {
                     System.out.println(index + " " + movies.get(index)); 
                 }
                 break;
 
-                case 5:
+                case 6:
                 boolean found = false;
                 System.out.println("Enter Movie Name:");
-                String name = sc.nextLine();
+                String name1 = sc.nextLine();
                 for(int index = 0; index < movies.size(); index++){
-                    Movie s = movies.get(index);
-                    if(s.getTitle().equals(name)){
-                    System.out.println(s);
+                    Movie n = movies.get(index);
+                    if(n.getTitle().equals(name1)){
+                    System.out.println(n);
                     found = true;
                 }
                 }
                 break;
 
-                case 6:
+                case 7:
                 boolean found2 = false;
                 System.out.println("Enter TV Show Name:");
-                String name1 = sc.nextLine();
+                String name2 = sc.nextLine();
                 for(int i = 0; i < shows.size(); i++){
-                    TVShow s = shows.get(i);
-                    if(s.getTitle().equals(name1)){
-                    System.out.println(s);
+                    TVShow t = shows.get(i);
+                    if(t.getTitle().equals(name2)){
+                    System.out.println(t);
                     found = true;
                 }
                 }

@@ -1,4 +1,4 @@
-public class TVShow extends Netflix{
+public class TVShow extends Program{
     private String Title;
     private int Seasons;
     private String Rating; 
